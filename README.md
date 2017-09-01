@@ -11,8 +11,11 @@ In essence, predictive coding is just control theory (albeit also generalized to
 
 #####  Adapted from Keller & Hahnloser, 2009
 
-The underlying idea here is simple: a "latent variable" layer, let's call it Y, tries to predict the state of the world X via a reconstruction matrix V. The layer receives as input its own prediction error in an online manner. These two-way dynamics mean that even without weight updates, Y can follow its input. This renders the architecture related to Kalman filters and similar Bayesian methods.
+The underlying idea here points to a simple generative model: a "latent variable" layer, let's call it Y, tries to predict the state of the world X via a reconstruction matrix V. The layer receives as input its own prediction error in an online manner. These two-way dynamics mean that even without weight updates, Y can follow its input. This renders the architecture related to Kalman filters and similar Bayesian methods. 
 
+We can easily find a learning rule that reflects the statistics of the environment that Y wants to predict. 
+
+However, the ultimate goal here isn't just to follow an arbitrarily complex input. 
 
 
 
